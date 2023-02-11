@@ -1,0 +1,38 @@
+\documentclass[8pt,a4paper,twoside,onecolumn,leqno,fleqn]{report}
+
+\input{./Preambule/preambule.sty.tex}
+%\addbibresource{refs.bib}
+
+\begin{document}
+	\hypersetup{hidelinks}
+	\setlength{\parskip}{6pt}
+	\setlength{\headheight}{14.61858pt}
+	\addtolength{\topmargin}{-2.49998pt}
+	\include{./Pages/Couverture/titlepage.tex}
+	
+	
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+	
+	\newpage
+	\thispagestyle{empty}
+	\renewcommand{\contentsname}{Sommaire}
+	\tableofcontents
+	
+	\newpage
+	\setcounter{page}{1}
+	\include{./Pages/Introduction/introduction.tex}
+	
+	\newpage
+	\include{./Pages/Conclusion/conclusion.tex}
+	
+	\newpage
+	\printbibliography[title=Références]
+	
+	\newpage
+	\renewcommand{\listfigurename}{Figures}
+	\listoffigures
+	\renewcommand{\listtablename}{Tableaux}
+	\listoftables
+\end{document}
